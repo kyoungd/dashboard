@@ -30,7 +30,7 @@ function getStatIcon(statIconName, statIconColor) {
 
 function statDescriptionString(ix, statArrow, statPercent, statPercentColor, statDescription) {
   if (statArrow === "" && statPercent === "")
-    return <span>{statDescription}</span>
+    return <span className="whitespace-nowrap">{statDescription}</span>
   else
     return (
       <li key={ix}>
@@ -46,7 +46,7 @@ function statDescriptionString(ix, statArrow, statPercent, statPercentColor, sta
           ></i>{" "}
           {statPercent}
         </span>
-        <span>{statDescription}</span>
+        <span className="whitespace-nowrap">{statDescription}</span>
       </li>
     );
 }

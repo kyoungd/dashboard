@@ -8,55 +8,45 @@ export default function HeaderStats() {
   return (
     <>
       {/* Header */}
-      <div className="relative bg-blueGray-800 md:pt-32 pb-32 pt-12">
+      <div className="relative md:pt-32 pb-32a pt-12">
         <div className="px-4 md:px-10 mx-auto w-full">
           <div>
             {/* Card stats */}
             <div className="flex flex-wrap">
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
-                  statSubtitle="TRAFFIC"
-                  statTitle="350,897"
-                  statArrow="up"
-                  statPercent="3.48"
-                  statPercentColor="text-emerald-500"
-                  statDescripiron="Since last month"
-                  statIconName="far fa-chart-bar"
-                  statIconColor="bg-red-500"
+                  statSubtitle="STATISTICS"
+                  statArrows={["up", "up"]}
+                  statPercents={["3.48 M", "32.7 %"]}
+                  statPercentColors={["text-emerald-500", "text-emerald-500"]}
+                  statDescriptions={["Share Float", "Float Percent"]}
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
-                  statSubtitle="NEW USERS"
-                  statTitle="2,356"
-                  statArrow="down"
-                  statPercent="3.48"
-                  statPercentColor="text-red-500"
-                  statDescripiron="Since last week"
+                  statSubtitle="LATEST NEWS"
+                  statTitle="+64"
+                  statDescriptions={["Sypris Wins Contract for Deep Space Program"]}
                   statIconName="fas fa-chart-pie"
                   statIconColor="bg-orange-500"
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
-                  statSubtitle="SALES"
-                  statTitle="924"
-                  statArrow="down"
-                  statPercent="1.10"
-                  statPercentColor="text-orange-500"
-                  statDescripiron="Since yesterday"
+                  statSubtitle="TWITTER"
+                  statTitle="+72"
+                  statPercentColors={["text-orange-500"]}
+                  statDescriptions={["SYPR is a monster"]}
                   statIconName="fas fa-users"
                   statIconColor="bg-pink-500"
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
-                  statSubtitle="PERFORMANCE"
-                  statTitle="49,65%"
-                  statArrow="up"
-                  statPercent="12"
-                  statPercentColor="text-emerald-500"
-                  statDescripiron="Since last month"
+                  statSubtitle="DISCORD"
+                  statTitle="+69"
+                  statPercentColors={["text-emerald-500"]}
+                  statDescriptions={["SYPR is looking like a winner"]}
                   statIconName="fas fa-percent"
                   statIconColor="bg-lightBlue-500"
                 />

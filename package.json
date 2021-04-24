@@ -1,9 +1,9 @@
 {
   "name": "notus-nextjs",
-  "homepage": "https://demos.creative-tim.com/notus-nextjs",
+  "homepage": "https://ecom-live.com",
   "version": "1.1.0",
   "description": "Notus NextJS - A free Tailwind CSS, NextJS and React Ui Kit and Admin by Creative Tim.",
-  "repository": "https://github.com/creativetimofficial/notus-nextjs",
+  "repository": "https://github.com/kyoungd/dashboard",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
@@ -13,6 +13,9 @@
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "next": "10.0.9",
+    "next-auth": "^3.16.1",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-scripts": "4.0.3",

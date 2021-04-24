@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { signIn, signOut, useSession } from 'next-auth/client'
 // components
 
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 
 export default function Navbar(props) {
+  const [session, loading] = useSession()
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
@@ -87,7 +89,36 @@ export default function Navbar(props) {
                   className="bg-blueGray-700 text-white active:bg-blueGray-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button"
                 >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Download
+
+                  <i className="fas fa-arrow-alt-circle-down"></i>
+                  {!session && <>
+                    <a
+                      href={`/api/auth/signin`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        signIn()
+                      }}
+                    >
+                      Sign in
+                    </a>
+                  </>}
+                  {session && <>
+                    {session.user.image && <span style={{ backgroundImage: `url(${session.user.image})` }} className="avatar" />}
+                    <span>
+                      <strong>{session.user.name || session.user.email}</strong>
+                    </span>
+                    <div>
+                      <a
+                        href={`/api/auth/signout`}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          signOut()
+                        }}
+                      >
+                        Sign out
+                      </a>
+                    </div>
+                  </>}
                 </button>
               </li>
             </ul>

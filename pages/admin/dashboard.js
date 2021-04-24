@@ -6,6 +6,7 @@ import CardLineChart from "components/Cards/CardLineChart.js";
 import CardBarChart from "components/Cards/CardBarChart.js";
 import CardPageVisits from "components/Cards/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
+import HeaderStats from "components/Headers/HeaderStats.js";
 
 // layout for page
 
@@ -14,6 +15,7 @@ import Admin from "layouts/Admin.js";
 export default function Dashboard() {
   return (
     <>
+      <HeaderStats />
       <div className="flex flex-wrap">
         <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
           <CardLineChart />
